@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>by samar | سمر آل زيد</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- خط عربي -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="site-bg"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <img src="assets/Logo-Web.png" alt="samar logo" class="brand-logo" />
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">الرئيسية</a>
+      <!--  <a href="#about">عني</a>  -->
+      <a href="#services">الخدمات</a>
+      <a href="#certificates">الشهادات</a>
+      <a href="#projects">المشاريع</a>
+      <a href="#faq">الأسئلة</a>
+      <a href="#contact">تواصل معي</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="hero-glow"></div>
+
+      <p class="small-badge">موثقة بوثيقة العمل الحر</p>
+
+      <h1 class="hero-title" id="typeName" title="اضغطي هنا">
+        <!-- يتم كتابة الاسم عبر الجافاسكربت -->
+      </h1>
+
+      <p class="hero-subtitle">UI/UX Designer</p>
+
+      <p class="hero-text">
+       مصممة واجهات وتجربة مستخدم (UI/UX)  
+       متدربة في أكاديمية طويق وأكاديمية أبل. 
+       أهتم ببناء واجهات رقمية واضحة، عملية، وقابلة للتطوير.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" id="whatsappHero" href="#" target="_blank">تواصل معي</a>
+        <a class="btn secondary" href="#projects">استعرض مشاريعي</a>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-wrap section" id="about">
+      <div class="stats-card">
+
+        <div class="stat-box">
+          <strong><span class="counter" data-target="20">1</span>+</strong>
+          <span>المعسكرات والبرامج التدريبية</span>
+        </div>
+
+        <div class="stat-box">
+          <strong><span class="counter" data-target="10">1</span>+</strong>
+          <span>مشاريع</span>
+        </div>
+
+        <div class="stat-box">
+          <strong><span class="counter" data-target="7">1</span>+</strong>
+          <span>جوائز وإنجازات</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="section-head">
+        <h2>الخدمات</h2>
+        <!--<p>خدمات تصميم رقمية تساعد مشروعك يظهر بشكل واضح، جميل، وسهل الاستخدام.</p>-->
+      </div>
+
+      <div class="slider-shell">
+        <div class="services-track">
+          <article class="service-card">
+            <div class="icon">🌐</div>
+            <h3>تصميم المواقع</h3>
+            <p>تصميم واجهات مواقع عصرية ومتجاوبة تعكس هوية المشروع وتسهّل تجربة المستخدم.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">📱</div>
+            <h3>تصميم التطبيقات</h3>
+            <p>تصميم تطبيقات عملية وسهلة الاستخدام مع تجربة مستخدم واضحة ومنظمة.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">🎨</div>
+            <h3>بناء Design Systems</h3>
+            <p>إنشاء أنظمة تصميم تساعد على توحيد الهوية، تسريع العمل، وتحسين جودة الواجهات.</p>
+          </article>
+
+          <!-- تكرار عشان الحركة تكون ناعمة وتستمر بلا انقطاع -->
+          <article class="service-card">
+            <div class="icon">🌐</div>
+            <h3>تصميم المواقع</h3>
+            <p>تصميم واجهات مواقع عصرية ومتجاوبة تعكس هوية المشروع وتسهّل تجربة المستخدم.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">📱</div>
+            <h3>تصميم التطبيقات</h3>
+            <p>تصميم تطبيقات عملية وسهلة الاستخدام مع تجربة مستخدم واضحة ومنظمة.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">🎨</div>
+            <h3>بناء Design Systems</h3>
+            <p>إنشاء أنظمة تصميم تساعد على توحيد الهوية، تسريع العمل، وتحسين جودة الواجهات.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<!-- Certificates -->
+    <section class="section" id="certificates">
+      <div class="section-head">
+        <h2>الشهادات</h2>
+        <!-- <p>برامج ومعسكرات طورت مهاراتي في التصميم، التقنية، وتحليل البيانات.</p>-->
+      </div>
+
+      <div class="cards-grid">
+        
+        <!-- الشهادة الأولى -->
+        <article class="info-card cert-card">
+          <div class="fake-img cert-img has-img">
+            <img src="assets/cert-apple.jpg" alt="شهادة أكاديمية أبل" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+
+          <div class="tags right-tags">
+            <span>UI/UX</span>
+            <span>Design Thinking</span>
+            <span>Prototype</span>
+          </div>
+
+          <h3 class="cert-title">البرنامج التأسيسي لأكاديمية أبل</h3>
+          <p>تجربة تدريبية ركزت على بناء الحلول الرقمية، التفكير التصميمي، وتجربة المستخدم.</p>
+        </article>
+
+        <!-- الشهادة الثانية -->
+        <article class="info-card cert-card">
+          <div class="fake-img cert-img has-img">
+            <img src="assets/cert-tuwaiq-uiux.jpg" alt="شهادة معسكر واجهة المستخدم طويق" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+
+          <div class="tags right-tags">
+            <span>Figma</span>
+            <span>User Flow</span>
+            <span>Wireframe</span>
+          </div>
+
+          <h3 class="cert-title">معسكر واجهة المستخدم من طويق</h3>
+          <p>معسكر متخصص في تصميم الواجهات، بناء النماذج الأولية، وتحسين تجربة المستخدم.</p>
+        </article>
+
+        <!-- الشهادة الثالثة -->
+        <article class="info-card cert-card">
+          <div class="fake-img cert-img has-img">
+            <img src="assets/cert-tuwaiq-data.jpg" alt="شهادة معسكر تحليل البيانات طويق" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+
+          <div class="tags right-tags">
+            <span>Data</span>
+            <span>Analysis</span>
+            <span>Dashboard</span>
+          </div>
+
+          <h3 class="cert-title">معسكر تحليل البيانات من طويق</h3>
+          <p>معسكر ركز على فهم البيانات، تحليلها، واستخراج مؤشرات تساعد في اتخاذ القرار.</p>
+        </article>
+      </div>
+      
+      <div class="center-action">
+        <a href="certificates.html" class="btn secondary">استعرض جميع الشهادات</a>
+      </div>
+    </section>
+
+<!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-head">
+        <h2>المشاريع</h2>
+        <!--<p>مجموعة من المشاريع التي عملت عليها في تصميم الواجهات، الويب، وتجارب الألعاب.</p>-->
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- المشروع الأول: مرسم -->
+        <article class="project-card">
+          <div class="project-img has-img">
+            <img src="assets/marsam-01.png" alt="مشروع مرسم" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="tags right-tags">
+            <span>UI Design</span>
+            <span>Visual Design</span>
+            <span>Figma</span>
+          </div>
+          <h3>مرسم</h3>
+          <p>مشروع تصميم يركز على تقديم تجربة بصرية إبداعية ومنظمة للمستخدم.</p>
+          <!-- الانتباه للرقم هنا ليتطابق مع مصفوفة الجافاسكريبت -->
+          <button class="card-btn" onclick="openProjectModal(projects[1])">عرض المشروع</button>
+        </article>
+
+        <!-- المشروع الثاني: وقوف -->
+        <article class="project-card">
+          <div class="project-img has-img">
+            <img src="assets/woqof-01.png" alt="مشروع وقوف" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="tags right-tags">
+            <span>UI/UX</span>
+            <span>Figma</span>
+            <span>Prototype</span>
+          </div>
+          <h3>وقوف</h3>
+          <p>تجربة رقمية تهدف إلى تحسين وتنظيم تجربة المستخدم من خلال واجهات واضحة وسهلة الاستخدام.</p>
+          <button class="card-btn" onclick="openProjectModal(projects[0])">عرض المشروع</button>
+        </article>
+
+        <!-- المشروع الثالث: لعبة أرث -->
+        <article class="project-card">
+          <div class="project-img has-img">
+            <img src="assets/arth-01.png" alt="لعبة أرث" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="tags right-tags">
+            <span>Game UI</span>
+            <span>UX</span>
+            <span>Culture</span>
+          </div>
+          <h3>لعبة أرث</h3>
+          <p>تجربة تفاعلية مستوحاة من الثقافة السعودية، تجمع بين التصميم البصري وتجربة المستخدم.</p>
+          <button class="card-btn" onclick="openProjectModal(projects[2])">عرض المشروع</button>
+        </article>
+
+      </div>
+    </section>
+
+<!-- Project Modal (النافذة المنبثقة للمشاريع) -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- الإكس صار برا المحتوى عشان يثبت بالشاشة وما يختفي مع النزول -->
+    <button class="modal-close" id="modalClose">×</button>
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- تم مسح المهارات وفريمات أرث بناءً على طلبك -->
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+      </div>
+
+      <!-- معرض الصور -->
+      <div class="modal-gallery" id="modalGallery"></div>
+
+      <!-- زر العودة لقسم المشاريع -->
+      <div class="center-action" style="margin-top: 48px;">
+        <button class="btn secondary" id="modalBackBtn">العودة لقسم المشاريع</button>
+      </div>
+    </div>
+  </div>
+
+  
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-head center">
+        <h2>الأسئلة الشائعة</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>ماهي الأدوات المستخدمة؟</span>
+            <b>+</b>
+          </button>
+          <div class="faq-answer">
+             Figma لتصاميم المواقع و التطبيقات
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>كيف يتم تسليم الملفات النهائية؟</span>
+            <b>+</b>
+          </button>
+          <div class="faq-answer">
+            يتم تسليم رابط مشروع Figma بعد اتمام الدفع
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>ماهي طرق الدفع المعتمدة؟</span>
+            <b>+</b>
+          </button>
+          <div class="faq-answer">
+            تحويل بنكي لحساب تجاري
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>ماهي آلية الدفع المعتمدة؟</span>
+            <b>+</b>
+          </button>
+          <div class="faq-answer">
+           يتم دفع 25% كدفعة أولى قبل بدء العمل، ويتم باقي الدفعات في نهاية المشروع.
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+
+    <!-- Contact -->
+<section class="contact section" id="contact">
+  <div class="contact-card">
+    <span class="contact-subtitle">التواصل</span>
+    <h2>هل لديك فكرة أو مشروع جديد؟</h2>
+    <p>
+      يسعدني مناقشة احتياجاتك والمساهمة في بناء منتج رقمي يحقق أهدافك.
+    </p>
+
+    <div class="contact-links">
+      
+      <!-- WhatsApp -->
+      <a id="whatsappContact" href="https://wa.me/966533708250" target="_blank">
+        WhatsApp
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a id="linkedinContact" href="https://www.linkedin.com/in/samar-abdulwahab-24054a2b6/" target="_blank">
+        LinkedIn
+        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      
+      <!-- Behance -->
+      <a id="behanceContact" href="https://www.behance.net/samaralzaid" target="_blank">
+        Behance
+        <svg viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.827 5.322 4.857h-7.601c.116 1.439 1.111 2.617 2.636 2.617 1.42 0 2.146-.645 2.508-1.282l2.334 2.403zm-5.263-5.58c-1.014 0-1.839.815-2.062 1.942h4.043c-.221-1.127-1.037-1.942-1.981-1.942zm-12.822-4.103c2.721 0 4.14 1.114 4.14 3.094 0 1.232-.622 2.122-1.65 2.628 1.488.358 2.292 1.326 2.292 2.923 0 2.247-1.579 3.518-4.502 3.518h-5.882v-12.163h5.602zm-1.848 4.606h1.758c1.077 0 1.583-.541 1.583-1.357 0-.962-.57-1.438-1.554-1.438h-1.787v2.795zm0 5.485h2.155c1.233 0 1.821-.61 1.821-1.564 0-1.144-.648-1.597-1.831-1.597h-2.145v3.161z"/></svg>
+      </a>
+
+      <!-- Email -->
+      <a id="emailContact" href="mailto:samar.alzaid.freelance@gmail.com">
+        Email
+        <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+      </a>
+
+      <!-- X (Twitter) -->
+      <a id="xContact" href="https://x.com/samar_1l" target="_blank">
+        X
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+    by samar © 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

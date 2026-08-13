@@ -1,0 +1,344 @@
+/* 
+  الروابط ورقم التواصل - تم وضع رقم الواتس واضافة الايميل
+*/
+/* 
+const LINKS = {
+  whatsapp: "https://wa.me/966533708250",
+  email: "mailto:hello@samar-alzaid.com", 
+  linkedin: "https://www.linkedin.com/in/USERNAME",
+  behance: "https://www.behance.net/USERNAME",
+  x: "https://x.com/USERNAME"
+};
+
+const projects = [
+  {
+    title: "وقوف",
+    englishName: "woqof",
+    category: "UI/UX",
+    skills: ["UI/UX", "Figma", "Prototype"],
+    description: "تجربة رقمية تهدف إلى تحسين وتنظيم تجربة المستخدم.",
+    link: "#",
+    cover: "assets/woqof-01.png",
+    images: ["assets/woqof-01.png", "assets/woqof-02.png", "assets/woqof-03.png", "assets/woqof-04.png"]
+  },
+  {
+    title: "مرسم",
+    englishName: "marsam",
+    category: "UI/UX",
+    skills: ["UI Design", "Visual Design", "Figma"],
+    description: "مشروع تصميم يركز على تقديم تجربة بصرية إبداعية.",
+    link: "#",
+    cover: "assets/marsam-01.png",
+    images: ["assets/marsam-01.png", "assets/marsam-02.png", "assets/marsam-03.png", "assets/marsam-04.png"]
+  },
+  {
+    title: "لعبة أرث",
+    englishName: "arth",
+    category: "UI/UX",
+    skills: ["Game UI", "UX", "Culture"],
+    description: "تجربة تفاعلية مستوحاة من الثقافة السعودية.",
+    link: "#",
+    cover: "assets/arth-01.png",
+    images: ["assets/arth-01.png", "assets/arth-02.png", "assets/arth-03.png", "assets/arth-04.png"]
+  },
+  {
+    title: "فريق ساع",
+    englishName: "saa-team",
+    category: "UI/UX",
+    skills: ["UI/UX", "Identity", "Figma"],
+    description: "تجربة تصميم تعكس هوية الفريق.",
+    link: "#",
+    cover: "assets/saa-team-01.png",
+    images: ["assets/saa-team-01.png", "assets/saa-team-02.png", "assets/saa-team-03.png", "assets/saa-team-04.png"]
+  },
+  {
+    title: "لعبة مداد",
+    englishName: "midad",
+    category: "3D Games",
+    skills: ["Unity", "3D Game", "Game UI"],
+    description: "لعبة ثلاثية الأبعاد بتجربة تفاعلية بسيطة.",
+    link: "#",
+    cover: "assets/midad-01.png",
+    images: ["assets/midad-01.png", "assets/midad-02.png", "assets/midad-03.png", "assets/midad-04.png"]
+  },
+  {
+    title: "قبل الخطى تمرة",
+    englishName: "qabl-alkhuta-tamrah",
+    category: "3D Games",
+    skills: ["Unity", "3D", "Game Design"],
+    description: "مشروع لعبة يركز على التفاعل البسيط.",
+    link: "#",
+    cover: "assets/qabl-alkhuta-tamrah-01.png",
+    images: ["assets/qabl-alkhuta-tamrah-01.png", "assets/qabl-alkhuta-tamrah-02.png", "assets/qabl-alkhuta-tamrah-03.png", "assets/qabl-alkhuta-tamrah-04.png"]
+  },
+  {
+    title: "رحالة",
+    englishName: "rahala",
+    category: "Web",
+    skills: ["Web UI", "HTML", "CSS"],
+    description: "تصميم واجهة ويب لتجربة سفر أو استكشاف.",
+    link: "#",
+    cover: "assets/rahala-01.png",
+    images: ["assets/rahala-01.png", "assets/rahala-02.png", "assets/rahala-03.png", "assets/rahala-04.png"]
+  },
+  {
+    title: "صلة",
+    englishName: "silah",
+    category: "Web",
+    skills: ["Web UI", "Map UI", "Dashboard"],
+    description: "منصة جامعية ذكية تعتمد على خريطة تفاعلية.",
+    link: "#",
+    cover: "assets/silah-01.png",
+    images: ["assets/silah-01.png", "assets/silah-02.png", "assets/silah-03.png", "assets/silah-04.png"]
+  },
+  {
+    title: "مشروع يقظ",
+    englishName: "yaqeth",
+    category: "Web",
+    skills: ["Web UI", "Figma", "HTML"],
+    description: "مشروع ويب يركز على عرض المعلومات بطريقة منظمة.",
+    link: "#",
+    cover: "assets/yaqeth-01.png",
+    images: ["assets/yaqeth-01.png", "assets/yaqeth-02.png", "assets/yaqeth-03.png", "assets/yaqeth-04.png"]
+  }
+];
+
+/* تفعيل القائمة الجانبية في الجوال */
+/* 
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navLinks.classList.toggle("show");
+  });
+
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.classList.remove("active");
+      navLinks.classList.remove("show");
+    });
+  });
+}
+
+/* روابط التواصل بأمان للتأكد من أنها لا تعطي أخطاء في الصفحات الأخرى */ /* 
+const safeSetHref = (id, url) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.href = url;
+  }
+};
+
+safeSetHref("whatsappHero", LINKS.whatsapp);
+safeSetHref("whatsappContact", LINKS.whatsapp);
+safeSetHref("emailContact", LINKS.email);
+safeSetHref("linkedinContact", LINKS.linkedin);
+safeSetHref("behanceContact", LINKS.behance);
+safeSetHref("xContact", LINKS.x);
+
+/* حركة كتابة الاسم - تعمل تلقائياً عند الدخول + عند الضغط */ /* 
+const typeName = document.getElementById("typeName");
+
+if (typeName) {
+  const fullName = "سمر آل زيد";
+  let typing = false;
+
+  function typeWriter() {
+    if (typing) return;
+    typing = true;
+    typeName.textContent = "";
+    typeName.classList.add("typing");
+
+    let index = 0;
+    const timer = setInterval(() => {
+      typeName.textContent += fullName[index];
+      index++;
+      if (index === fullName.length) {
+        clearInterval(timer);
+        typeName.classList.remove("typing");
+        typing = false;
+      }
+    }, 120);
+  }
+
+  // تشغيل الحركة عند التحميل
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(typeWriter, 400); // تأخير بسيط لجمالية الدخول
+  });
+
+  // إمكانية تشغيلها مرة أخرى عند الضغط
+  typeName.addEventListener("click", typeWriter);
+}
+
+/* حركة عد الأرقام (العداد) في قسم عني - محسّنة لتبدأ من 1 ببطء */ /* 
+const counters = document.querySelectorAll('.counter');
+
+if (counters.length > 0) {
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = +counter.getAttribute('data-target');
+        let count = 1; // البدء من رقم 1
+        
+        counter.innerText = count;
+
+        const updateCount = setInterval(() => {
+          count++;
+          counter.innerText = count;
+          if (count >= target) {
+            clearInterval(updateCount);
+            counter.innerText = target;
+          }
+        }, 80); // سرعة مناسبة لرؤية الأرقام تتصاعد
+
+        counterObserver.unobserve(counter); // إيقاف المراقبة بعد انتهاء العد
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => counterObserver.observe(counter));
+}
+
+/* حركة مبتكرة لدخول الشهادات (Animation) *//* 
+const certCards = document.querySelectorAll(".cert-card"); /* 
+
+if (certCards.length > 0) {
+  const certObserver = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // اضافة تاخير بسيط لكل كرت لعمل حركة متسلسلة رائعة
+        setTimeout(() => {
+          entry.target.classList.add("animated");
+        }, index * 100); 
+        certObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  certCards.forEach(card => certObserver.observe(card));
+}
+
+/* عرض المشاريع (تدعم الرئيسية وصفحة كل المشاريع) *//* 
+const indexProjectsGrid = document.getElementById("projectsGrid"); // لصفحة الرئيسية (يعرض 3 فقط)
+const allProjectsGrid = document.getElementById("projectsGridAll"); // لصفحة كل المشاريع (يعرض الكل)
+
+function renderProjects(container, limit = null) {
+  if (!container) return;
+  
+  container.innerHTML = "";
+  const projectsToRender = limit ? projects.slice(0, limit) : projects;
+
+  projectsToRender.forEach((project) => {
+    const originalIndex = projects.indexOf(project);
+    const card = document.createElement("article");
+    card.className = "project-card";
+
+    card.innerHTML = `
+      <div class="project-img">
+        <img src="${project.cover}" alt="${project.title}" onload="this.parentElement.classList.add('has-img')" />
+        <span>${project.englishName}-01</span>
+      </div>
+
+      <div class="tags right-tags">
+        ${project.skills.map((skill) => `<span>${skill}</span>`).join("")}
+      </div>
+
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+
+      <button class="card-btn" data-index="${originalIndex}">
+        عرض المشروع
+      </button>
+    `;
+
+    container.appendChild(card);
+  });
+
+  // إضافة أحداث الضغط لفتح النافذة
+  document.querySelectorAll(".card-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const projectIndex = Number(btn.dataset.index);
+      openProjectModal(projects[projectIndex]);
+    });
+  });
+}
+
+// تنفيذ دالة عرض المشاريع
+if (indexProjectsGrid) {
+  renderProjects(indexProjectsGrid, 3); // في الرئيسية يعرض أول 3 مشاريع فقط
+}
+
+if (allProjectsGrid) {
+  renderProjects(allProjectsGrid, null); // في صفحة المشاريع يعرض كل شيء
+}
+
+
+/* نافذة المشروع - مصممة كصفحة كاملة مستقلة قابلة للنزول السلس *//* 
+const modal = document.getElementById("projectModal");
+
+if (modal) {
+  const modalOverlay = document.getElementById("modalOverlay");
+  const modalClose = document.getElementById("modalClose");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalCategory = document.getElementById("modalCategory");
+  const modalDesc = document.getElementById("modalDesc");
+  const modalGallery = document.getElementById("modalGallery");
+  const modalProjectLink = document.getElementById("modalProjectLink");
+
+  function openProjectModal(project) {
+    modalTitle.textContent = project.title;
+    modalCategory.textContent = project.category;
+    modalDesc.textContent = project.description;
+    modalProjectLink.href = project.link;
+
+    modalGallery.innerHTML = project.images
+      .map((img, index) => {
+        const number = String(index + 1).padStart(2, "0");
+        return `
+          <div class="gallery-item">
+            <img src="${img}" alt="${project.title} ${number}" onload="this.parentElement.classList.add('has-img')" />
+            <span>${project.englishName}-${number}</span>
+          </div>
+        `;
+      })
+      .join("");
+
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("no-scroll");
+  }
+
+  function closeProjectModal() {
+    modal.classList.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("no-scroll");
+  }
+
+  modalClose.addEventListener("click", closeProjectModal);
+  modalOverlay.addEventListener("click", closeProjectModal);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeProjectModal();
+    }
+  });
+}
+
+/* الأسئلة الشائعة *//* 
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const question = item.querySelector(".faq-question");
+
+  question.addEventListener("click", () => {
+    faqItems.forEach((otherItem) => {
+      if (otherItem !== item) {
+        otherItem.classList.remove("active");
+      }
+    });
+
+    item.classList.toggle("active");
+  });
+});*/

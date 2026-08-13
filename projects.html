@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>جميع المشاريع | سمر آل زيد</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site-bg"></div>
+
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <img src="Logo-Web.png" alt="samar logo" class="brand-logo" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">العودة للرئيسية</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="section-head center">
+      <h2 class="page-title">أعمالي ومشاريعي</h2>
+      <p>معرض شامل لجميع المشاريع والتجارب الرقمية التي عملت عليها.</p>
+    </div>
+
+    <!-- الآيدي الخاص بصفحة جميع المشاريع (الجافاسكربت سيعرض كل المشاريع هنا تلقائياً) -->
+    <div class="projects-grid" id="projectsGridAll"></div>
+  </main>
+
+  <!-- نافذة عرض المشروع -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="modal-close" id="modalClose">×</button>
+        <span id="modalCategory"></span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <a class="btn primary modal-link" id="modalProjectLink" href="#" target="_blank">
+          فتح رابط المشروع
+        </a>
+      </div>
+
+      <div class="modal-gallery" id="modalGallery"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    by samar © 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

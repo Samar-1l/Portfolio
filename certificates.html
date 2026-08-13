@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>جميع الشهادات | سمر آل زيد</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* تنسيقات إضافية خاصة بصفحة الشهادات */
+    .close-btn {
+      position: fixed; /* هذي الكلمة اللي تغيرت */
+      top: 32px;
+      left: 32px;
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.3s ease;
+      z-index: 100;
+    }
+    .close-btn:hover {
+      background: var(--pink);
+      color: #000;
+      border-color: var(--pink);
+    }
+    
+    /* تنسيق الفلاتر */
+    .cert-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    
+    .cert-filters button {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-family: inherit;
+    }
+    
+    .cert-filters button.active, 
+    .cert-filters button:hover {
+      background: var(--pink);
+      color: #000;
+      border-color: var(--pink);
+    }
+
+    /* تنسيق كروت الشهادات الجديد */
+    .cert-item {
+      display: none; /* مخفي افتراضياً، يتم إظهاره بالجافاسكريبت */
+    }
+    .cert-item.show {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cert-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 12px;
+    }
+    
+    .cert-issuer {
+      font-weight: 700;
+      color: var(--pink-2);
+    }
+    
+    .cert-year {
+      background: rgba(255,255,255,0.05);
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-bg"></div>
+
+  <!-- زر العودة -->
+  <a href="index.html" class="close-btn" title="العودة للرئيسية">✕</a>
+
+  <main class="section">
+    <div class="section-head center">
+      <h2 class="page-title">جميع الشهادات</h2>
+      <p>سجل حافل بالمعسكرات والبرامج التي ساهمت في تطوير مهاراتي.</p>
+    </div>
+
+    <!-- أزرار التصفية -->
+    <div class="cert-filters" id="certFilters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="uiux">UI/UX</button>
+      <button data-filter="ai-data">AI & Data Analysis</button>
+      <button data-filter="mechatronics">Mechatronics</button>
+      <button data-filter="metaverse">Metaverse</button>
+    </div>
+
+    <!-- شبكة الشهادات -->
+    <div class="cards-grid" id="certsGrid">
+      
+      <!-- ترتيب All المطابق لطلبك -->
+      
+      <!-- 1 -->
+      <article class="info-card cert-card cert-item show" data-category="uiux">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-uiux-01.jpg" alt="Apple Foundation Program" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Apple Foundation Program</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Apple Developer Academy</span>
+          <span class="cert-year">2026</span>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="info-card cert-card cert-item show" data-category="uiux">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-uiux-02.jpg" alt="UI/UX Bootcamp" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">UI/UX Bootcamp</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="info-card cert-card cert-item show" data-category="uiux">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-uiux-03.jpg" alt="UI/UX Program" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">UI/UX Program</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-01.png" alt="Data Analysis Bootcamp" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Data Analysis Bootcamp</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-02.png" alt="Python Program" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Python Program</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2023</span>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-03.png" alt="PCEPT Certification" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">PCEPT Certification</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Python institute</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="info-card cert-card cert-item show" data-category="mechatronics">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-mech-01.png" alt="Mechatronics Bootcamp" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Mechatronics Bootcamp</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="info-card cert-card cert-item show" data-category="mechatronics">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-mech-02.png" alt="Arduino Program" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Arduino Program</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="info-card cert-card cert-item show" data-category="mechatronics">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-mech-03.png" alt="Arduino Junior" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Arduino Junior</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Arduino</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="info-card cert-card cert-item show" data-category="metaverse">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-meta-01.png" alt="Metaverse Program" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Metaverse Program</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 11 -->
+      <article class="info-card cert-card cert-item show" data-category="uiux">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-uiux-04.png" alt="هاكاثون تحدي تطبيقات الويب🥇" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">هاكاثون تحدي تطبيقات الويب🥇</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 12 -->
+      <article class="info-card cert-card cert-item show" data-category="metaverse">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-meta-02.png" alt="هاكاثون الألعاب الاكترونية🥉" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">هاكاثون الألعاب الاكترونية🥉</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 13 -->
+      <article class="info-card cert-card cert-item show" data-category="metaverse">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-meta-03.png" alt="هاكاثون ألف ليلة وليلة🥈" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">هاكاثون ألف ليلة وليلة🥈</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">QABAS</span>
+          <span class="cert-year">2026</span>
+        </div>
+      </article>
+
+      <!-- 14 -->
+      <article class="info-card cert-card cert-item show" data-category="uiux">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-uiux-05.png" alt="Saudi Tech Freelance" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Saudi Tech Freelance</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Futurex</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 15 -->
+      <article class="info-card cert-card cert-item show" data-category="uiux">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-uiux-06.png" alt="UI/UX" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">UI/UX</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 16 -->
+      <article class="info-card cert-card cert-item show" data-category="uiux">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-uiux-07.png" alt="البحث والتخطيط في تجربة المستخدم" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">البحث والتخطيط في تجربة المستخدم</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2026</span>
+        </div>
+      </article>
+
+      <!-- 17 -->
+      <article class="info-card cert-card cert-item show" data-category="uiux">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-uiux-08.png" alt="تصميم النماذج الأولية لواجهات المستخدم" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">تصميم النماذج الأولية لواجهات المستخدم</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2026</span>
+        </div>
+      </article>
+
+<!-- 18 
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-01.png" alt="Data Analysis Bootcamp" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Data Analysis Bootcamp</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Tuwaiq Academy</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article> 
+      -->
+
+      <!-- 18 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-04.png" alt="Data Analysis Bootcamp" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Data Analysis Bootcamp</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">Google Developer Group</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+
+      <!-- 27 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-13.png" alt="Python Basics" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Python Basics</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">University of Michigan</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 28 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-14.png" alt="Python Functions, Files, and Dictionaries" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Python Functions, Files, and Dictionaries</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">University of Michigan</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 29 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-15.png" alt="Data Collection and Processing with Python" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Data Collection and Processing with Python</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">University of Michigan</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 30 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-16.png" alt="Python Classes and Inheritance" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Python Classes and Inheritance</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">University of Michigan</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 19 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-05.png" alt="Python 101" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Python 101</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </article>
+
+      <!-- 20 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-06.png" alt="SQL 101" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">SQL 101</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 21 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-07.png" alt="SQL 102" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">SQL 102</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 22 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-08.png" alt="Power Bi 101" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Power Bi 101</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 23 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-09.png" alt="Power Bi 102" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Power Bi 102</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 24 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-10.png" alt="مقدمة لتمثيل البيانات باستخدام Tableau" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">مقدمة لتمثيل البيانات باستخدام Tableau</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 25 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-11.png" alt="تمثيل البيانات: مكتبة Matplotlib" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">تمثيل البيانات: مكتبة Matplotlib</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 26 -->
+      <article class="info-card cert-card cert-item show" data-category="ai-data">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-aidata-12.png" alt="تحليل ومعالجة البيانات: مكتبة NumPy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">تحليل ومعالجة البيانات: مكتبة NumPy</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2025</span>
+        </div>
+      </article>
+
+      <!-- 31 -->
+      <article class="info-card cert-card cert-item show" data-category="mechatronics">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-mech-04.png" alt="الروبوت والأردوينو مع الذكاء الاصطناعي" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">الروبوت والأردوينو مع الذكاء الاصطناعي</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2026</span>
+        </div>
+      </article>
+
+      <!-- 32 -->
+      <article class="info-card cert-card cert-item show" data-category="mechatronics">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-mech-05.png" alt="C++ 101" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">C++ 101</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2026</span>
+        </div>
+      </article>
+
+      <!-- 33 -->
+      <article class="info-card cert-card cert-item show" data-category="metaverse">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-meta-04.png" alt="C# 101" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">C# 101</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2026</span>
+        </div>
+      </article>
+
+      <!-- 34 -->
+      <article class="info-card cert-card cert-item show" data-category="metaverse">
+        <div class="fake-img cert-img has-img">
+          <img src="assets/cert-meta-05.png" alt="Unity 101" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="cert-title">Unity 101</h3>
+        <div class="cert-details">
+          <span class="cert-issuer">منصة سطر التعليمية</span>
+          <span class="cert-year">2026</span>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    by samar © 2026
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // سكريبت للتعامل مع الفلاتر في صفحة الشهادات فقط
+    const filterButtons = document.querySelectorAll('#certFilters button');
+    const certItems = document.querySelectorAll('.cert-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // إزالة active من كل الأزرار وإضافتها للزر المضغوط
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        certItems.forEach(item => {
+          // إزالة كلاس show أولاً لتفعيل الأنيميشن
+          item.classList.remove('show');
+          
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            // إضافة تأخير بسيط جداً لإعادة تفعيل الأنيميشن
+            setTimeout(() => {
+              item.classList.add('show');
+            }, 10);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
