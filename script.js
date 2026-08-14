@@ -12,21 +12,21 @@ const LINKS = {
 // مصفوفة المشاريع مع عدد الصور الدقيق حسب طلبك
 const projects = [
   { 
-    title: "وقوف", 
+    title: "تطبيق وقوف", 
     englishName: "woqof", 
     category: "UI/UX", 
     skills: ["UI/UX", "Figma", "Prototype"],
-    description: "تجربة رقمية تهدف إلى تحسين وتنظيم تجربة المستخدم من خلال واجهات واضحة وسهلة الاستخدام.",
+    //description: "تجربة رقمية تهدف إلى تحسين وتنظيم تجربة المستخدم من خلال واجهات واضحة وسهلة الاستخدام.",
     cover: "assets/woqof-01.png",
     // 6 صور شاملة الغلاف
     images: ["assets/woqof-01.png", "assets/woqof-02.png", "assets/woqof-03.png", "assets/woqof-04.png", "assets/woqof-05.png", "assets/woqof-06.png"] 
   },
   { 
-    title: "مرسم", 
+    title: "موقع مرسم", 
     englishName: "marsam", 
     category: "UI/UX", 
     skills: ["UI Design", "Visual Design", "Figma"],
-    description: "مشروع تصميم يركز على تقديم تجربة بصرية إبداعية ومنظمة للمستخدم.",
+    //description: "مشروع تصميم يركز على تقديم تجربة بصرية إبداعية ومنظمة للمستخدم.",
     cover: "assets/marsam-01.png",
     // 8 صور شاملة الغلاف
     images: ["assets/marsam-01.png", "assets/marsam-02.png", "assets/marsam-03.png", "assets/marsam-04.png", "assets/marsam-05.png", "assets/marsam-06.png", "assets/marsam-07.png", "assets/marsam-08.png"] 
@@ -36,7 +36,7 @@ const projects = [
     englishName: "arth", 
     category: "Game UI", 
     skills: ["Game UI", "UX", "Culture"],
-    description: "تجربة تفاعلية مستوحاة من الثقافة السعودية، تجمع بين التصميم البصري وتجربة المستخدم.",
+    //description: "تجربة تفاعلية مستوحاة من الثقافة السعودية، تجمع بين التصميم البصري وتجربة المستخدم.",
     cover: "assets/arth-01.png",
     // معلومات إضافية خاصة بلعبة أرث
     teamInfo: "سمر آل زيد (UI/UX) - فريق التطوير والبرمجة", 
