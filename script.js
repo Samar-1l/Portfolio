@@ -22,7 +22,7 @@ const projects = [
     images: ["assets/woqof-01.png", "assets/woqof-02.png", "assets/woqof-03.png", "assets/woqof-04.png", "assets/woqof-05.png", "assets/woqof-06.png"] 
   },
   { 
-    title: "موقع مرسم", 
+    title: "مشروع مرسم", 
     englishName: "marsam", 
     category: "UI/UX", 
     skills: ["UI Design", "Visual Design", "Figma"],
