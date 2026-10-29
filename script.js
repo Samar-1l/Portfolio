@@ -70,10 +70,10 @@ const projects = [
     description: "تطبيق يساعد في العثور على الحيوانات الأليفة المفقودة وإعادتها إلى أصحابها، من خلال تجربة رقمية سهلة تسهّل البحث والتواصل.",
     cover: "assets/findly-01.png",
     images: [
-      "assets/findly-01.png",
-      "assets/findly-02.png",
-      "assets/findly-03.png",
-      "assets/findly-04.png"
+      "assets/Findly-01.png",
+      "assets/Findly-02.png",
+      "assets/Findly-03.png",
+      "assets/Findly-04.png"
     ]
   }
 ];
