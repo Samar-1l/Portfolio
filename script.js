@@ -68,7 +68,7 @@ const projects = [
     category: "UI/UX",
     skills: ["UI/UX", "Figma", "Prototype"],
     description: "تطبيق يساعد في العثور على الحيوانات الأليفة المفقودة وإعادتها إلى أصحابها، من خلال تجربة رقمية سهلة تسهّل البحث والتواصل.",
-    cover: "assets/findly-01.png",
+    cover: "assets/Findly-01.png",
     images: [
       "assets/Findly-01.png",
       "assets/Findly-02.png",
