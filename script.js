@@ -63,7 +63,7 @@ const projects = [
     ]
   },
   {
-    title: "تطبيق فايندلي",
+    title: "تطبيق findly",
     englishName: "findly",
     category: "UI/UX",
     skills: ["UI/UX", "Figma", "Prototype"],
